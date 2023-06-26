@@ -37,7 +37,7 @@ public class CardDeliveryApplicationTest {
         $("[data-test-id=phone] input").setValue("+79030000000");
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $("[data-test-id=notification]").shouldHave(text("Встреча успешно забронирована на " + planDate), Duration.ofSeconds(14)).shouldBe(visible);
+        $("[data-test-id=notification] .notification__content").shouldHave(text("Встреча успешно забронирована на " + planDate), Duration.ofSeconds(14)).shouldBe(visible);
     }
 
 
