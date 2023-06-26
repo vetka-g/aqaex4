@@ -31,10 +31,10 @@ public class CardDeliveryApplicationTest {
     @Test
     void shouldFillTheFormCorrect() {
         String planDate = setDate(4);
-        $("[data-test-id=city] input").setValue("Омск");
-        $("[data-test-id=date] input").doubleClick().sendKeys(planDate);
-        $("[data-test-id=name] input").setValue("Лесник Трудовой-Заядлый");
-        $("[data-test-id=phone] input").setValue("+79030000000");
+        $("[data-test-id=city] .input__control").setValue("Омск");
+        $("[data-test-id=date] .input__control").doubleClick().sendKeys(planDate);
+        $("[data-test-id=name] .input__control").setValue("Лесник Трудовой-Заядлый");
+        $("[data-test-id=phone] .input__control").setValue("+79030000000");
         $("[data-test-id=agreement]").click();
         $(".button").click();
         $("[data-test-id=notification] .notification__content").shouldHave(text("Встреча успешно забронирована на " + planDate), Duration.ofSeconds(14)).shouldBe(visible);
