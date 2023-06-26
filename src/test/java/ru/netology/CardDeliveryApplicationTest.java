@@ -20,7 +20,7 @@ public class CardDeliveryApplicationTest {
         open("http://localhost:9999/");
     }
 
-    public String setDate(int addDays) {
+    private String setDate(int addDays) {
         LocalDate currentDate = LocalDate.now();
         LocalDate futureDate = currentDate.plusDays(addDays);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
